@@ -4,7 +4,7 @@ An interactive whale anatomy diagram built with React. Click on labeled points t
 
 ## Live Demo
 
-Hosted on GitHub Pages: `https://<your-username>.github.io/whale-diagram/`
+Hosted on GitHub Pages: `https://alexover1.github.io/whale-diagram/`
 
 ## Features
 
@@ -23,7 +23,7 @@ Hosted on GitHub Pages: `https://<your-username>.github.io/whale-diagram/`
 ### Installation
 
 ```bash
-git clone https://github.com/<your-username>/whale-diagram.git
+git clone https://github.com/alexover1/whale-diagram.git
 cd whale-diagram
 npm install
 ```
@@ -66,7 +66,6 @@ npm install --save-dev gh-pages
 
 ```json
 "scripts": {
-  "predeploy": "npm run build",
   "deploy": "gh-pages -d dist"
 }
 ```
