@@ -1,16 +1,104 @@
-# React + Vite
+# 🐋 The Slop Tunnel — Whale Anatomy Diagram
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive whale anatomy diagram built with React. Click on labeled points to learn about each part of the whale's digestive and respiratory system.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Hosted on GitHub Pages: `https://<your-username>.github.io/whale-diagram/`
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Interactive SVG diagram with clickable anatomy labels
+- Covers the blowhole, lungs, baleen/mouth, stomach, intestines, and exit
+- Ocean-themed dark UI
+- Built with React + Vite, no external dependencies
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js v18+
+- npm
+
+### Installation
+
+```bash
+git clone https://github.com/<your-username>/whale-diagram.git
+cd whale-diagram
+npm install
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+Opens at `http://localhost:5173`
+
+### Build
+
+```bash
+npm run build
+```
+
+Output goes to the `dist/` folder.
+
+## Deployment
+
+### GitHub Pages
+
+1. Set the base path in `vite.config.js`:
+
+```js
+export default {
+  base: '/whale-diagram/',
+}
+```
+
+2. Install the deploy helper:
+
+```bash
+npm install --save-dev gh-pages
+```
+
+3. Add to `package.json`:
+
+```json
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+}
+```
+
+4. Deploy:
+
+```bash
+npm run deploy
+```
+
+5. In your GitHub repo, go to **Settings → Pages** and set the source branch to `gh-pages`.
+
+### Netlify / Vercel (easier)
+
+Connect your repo and set the build command to `npm run build` and publish directory to `dist`. Auto-deploys on every push.
+
+## Project Structure
+
+```
+whale-diagram/
+├── src/
+│   └── App.jsx        # Main whale diagram component
+├── public/
+├── vite.config.js
+└── package.json
+```
+
+## Built With
+
+- [React](https://react.dev)
+- [Vite](https://vitejs.dev)
+
+## License
+
+MIT
